@@ -1,0 +1,31 @@
+const database = 'mekanbul';
+use(database);
+db.venues.insertOne(
+{
+  "name": "Borough Market",
+  "address": " Londra",
+  "rating": 5,
+  "foodanddrink": [
+    "ravioli",
+    "ıstakoz",
+    "fish and chips"
+  ],
+  "coordinates": [
+   51.505762878515085, -0.09059881981112691
+  ],
+  "hours": [
+    {
+      "days": "Pazartesi-Cuma",
+      "open": "8:00",
+      "close": "22:00",
+      "isClosed": false
+    },
+    {
+      "days": "Cumartesi-Pazar",
+      "open": "8:00",
+      "close": "22:00",
+      "isClosed": false
+    }
+  ]
+}
+ );

@@ -1,0 +1,605 @@
+{
+	"info": {
+		"_postman_id": "8fcdc404-6ee6-472c-a3e5-691c4b284ccd",
+		"name": "Tuğçe Ak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50758006",
+		"_collection_link": "https://ttugceaak-7290936.postman.co/workspace/Tu%C4%9F%C3%A7e-Ak's-Workspace~ac98583c-f675-4283-8917-a58121223b9a/collection/50758006-8fcdc404-6ee6-472c-a3e5-691c4b284ccd?action=share&source=collection_link&creator=50758006"
+	},
+	"item": [
+		{
+			"name": "Add Venue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var id = pm.response.json()._id;",
+							"pm.environment.set(\"venueid\", id);",
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "borsa tantuni",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "mersin sahil",
+							"type": "text"
+						},
+						{
+							"key": "foodanddrink",
+							"value": "tantuni",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "40",
+							"type": "text"
+						},
+						{
+							"key": "long",
+							"value": "37",
+							"type": "text"
+						},
+						{
+							"key": "day1",
+							"value": "Pazartesi,cuma",
+							"type": "text"
+						},
+						{
+							"key": "open1",
+							"value": "11.00",
+							"type": "text"
+						},
+						{
+							"key": "close1",
+							"value": "02.00",
+							"type": "text"
+						},
+						{
+							"key": "isClosed1",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "open2",
+							"value": "10.00",
+							"type": "text"
+						},
+						{
+							"key": "close2",
+							"value": "03.00",
+							"type": "text"
+						},
+						{
+							"key": "isClosed2",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "day2",
+							"value": "Cumartesi-Pazar",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://backend-six-coral-59.vercel.app/api/venues",
+					"protocol": "https",
+					"host": [
+						"backend-six-coral-59",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Nearby Venues",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://backend-six-coral-59.vercel.app/api/venues?lat=38&long=34",
+					"protocol": "https",
+					"host": [
+						"backend-six-coral-59",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "38"
+						},
+						{
+							"key": "long",
+							"value": "34"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Venue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://backend-six-coral-59.vercel.app/api/venues/{{venueid}}",
+					"protocol": "https",
+					"host": [
+						"backend-six-coral-59",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues",
+						"{{venueid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Venue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "happy people",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "mersin forum avm",
+							"type": "text"
+						},
+						{
+							"key": "foodanddrink",
+							"value": "burger",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "45",
+							"type": "text"
+						},
+						{
+							"key": "long",
+							"value": "36",
+							"type": "text"
+						},
+						{
+							"key": "day1",
+							"value": "Pazartesi-Cuma",
+							"type": "text"
+						},
+						{
+							"key": "open1",
+							"value": "11.00",
+							"type": "text"
+						},
+						{
+							"key": "close1",
+							"value": "23.00",
+							"type": "text"
+						},
+						{
+							"key": "isClosed1",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "day2",
+							"value": "Cumartesi-Pazar",
+							"type": "text"
+						},
+						{
+							"key": "open2",
+							"value": "11.00",
+							"type": "text"
+						},
+						{
+							"key": "close2",
+							"value": "23.00",
+							"type": "text"
+						},
+						{
+							"key": "isClosed2",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://backend-six-coral-59.vercel.app/api/venues/{{venueid}}",
+					"protocol": "https",
+					"host": [
+						"backend-six-coral-59",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues",
+						"{{venueid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Comment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var id = pm.response.json()._id",
+							"pm.environment.set(\"commentid\", id);",
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "author",
+							"value": "Tuğçe",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "harika bir mekan!",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://backend-six-coral-59.vercel.app/api/venues/{{venueid}}/comments",
+					"protocol": "https",
+					"host": [
+						"backend-six-coral-59",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues",
+						"{{venueid}}",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Comment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var id = pm.response.json().comment._id",
+							"pm.environment.set(\"commentid\", id);",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://backend-six-coral-59.vercel.app/api/venues/{{venueid}}/comments/{{commentid}}",
+					"protocol": "https",
+					"host": [
+						"backend-six-coral-59",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues",
+						"{{venueid}}",
+						"comments",
+						"{{commentid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Comment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "author",
+							"value": "Kağan",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "beğenmedim.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://backend-six-coral-59.vercel.app/api/venues/{{venueid}}/comments/{{commentid}}",
+					"protocol": "https",
+					"host": [
+						"backend-six-coral-59",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues",
+						"{{venueid}}",
+						"comments",
+						"{{commentid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Comment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://backend-six-coral-59.vercel.app/api/venues/{{venueid}}/comments/{{commentid}}",
+					"protocol": "https",
+					"host": [
+						"backend-six-coral-59",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues",
+						"{{venueid}}",
+						"comments",
+						"{{commentid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Venue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://backend-six-coral-59.vercel.app/api/venues/{{venueid}}",
+					"protocol": "https",
+					"host": [
+						"backend-six-coral-59",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues",
+						"{{venueid}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
