@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "8fcdc404-6ee6-472c-a3e5-691c4b284ccd",
+		"_postman_id": "86c510ad-6d9e-408c-9c08-efbd460dbc8e",
 		"name": "Tuğçe Ak",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "50758006",
-		"_collection_link": "https://ttugceaak-7290936.postman.co/workspace/Tu%C4%9F%C3%A7e-Ak's-Workspace~ac98583c-f675-4283-8917-a58121223b9a/collection/50758006-8fcdc404-6ee6-472c-a3e5-691c4b284ccd?action=share&source=collection_link&creator=50758006"
+		"_collection_link": "https://ttugceaak-7290936.postman.co/workspace/Tu%C4%9F%C3%A7e-Ak's-Workspace~ac98583c-f675-4283-8917-a58121223b9a/collection/50758006-86c510ad-6d9e-408c-9c08-efbd460dbc8e?action=share&source=collection_link&creator=50758006"
 	},
 	"item": [
 		{
@@ -100,10 +100,10 @@
 					]
 				},
 				"url": {
-					"raw": "https://backend-six-coral-59.vercel.app/api/venues",
+					"raw": "https://web-orpin-zeta-44.vercel.app/api/venues",
 					"protocol": "https",
 					"host": [
-						"backend-six-coral-59",
+						"web-orpin-zeta-44",
 						"vercel",
 						"app"
 					],
@@ -143,10 +143,10 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "https://backend-six-coral-59.vercel.app/api/venues?lat=38&long=34",
+					"raw": "https://web-orpin-zeta-44.vercel.app/api/venues?lat=38&long=34",
 					"protocol": "https",
 					"host": [
-						"backend-six-coral-59",
+						"web-orpin-zeta-44",
 						"vercel",
 						"app"
 					],
@@ -189,10 +189,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://backend-six-coral-59.vercel.app/api/venues/{{venueid}}",
+					"raw": "https://web-orpin-zeta-44.vercel.app/api/venues/{{venueid}}",
 					"protocol": "https",
 					"host": [
-						"backend-six-coral-59",
+						"web-orpin-zeta-44",
 						"vercel",
 						"app"
 					],
@@ -296,10 +296,10 @@
 					]
 				},
 				"url": {
-					"raw": "https://backend-six-coral-59.vercel.app/api/venues/{{venueid}}",
+					"raw": "https://web-orpin-zeta-44.vercel.app/api/venues/{{venueid}}",
 					"protocol": "https",
 					"host": [
-						"backend-six-coral-59",
+						"web-orpin-zeta-44",
 						"vercel",
 						"app"
 					],
@@ -358,10 +358,10 @@
 					]
 				},
 				"url": {
-					"raw": "https://backend-six-coral-59.vercel.app/api/venues/{{venueid}}/comments",
+					"raw": "https://web-orpin-zeta-44.vercel.app/api/venues/{{venueid}}/comments",
 					"protocol": "https",
 					"host": [
-						"backend-six-coral-59",
+						"web-orpin-zeta-44",
 						"vercel",
 						"app"
 					],
@@ -416,10 +416,10 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "https://backend-six-coral-59.vercel.app/api/venues/{{venueid}}/comments/{{commentid}}",
+					"raw": "https://web-orpin-zeta-44.vercel.app/api/venues/{{venueid}}/comments/{{commentid}}",
 					"protocol": "https",
 					"host": [
-						"backend-six-coral-59",
+						"web-orpin-zeta-44",
 						"vercel",
 						"app"
 					],
@@ -475,10 +475,10 @@
 					]
 				},
 				"url": {
-					"raw": "https://backend-six-coral-59.vercel.app/api/venues/{{venueid}}/comments/{{commentid}}",
+					"raw": "https://web-orpin-zeta-44.vercel.app/api/venues/{{venueid}}/comments/{{commentid}}",
 					"protocol": "https",
 					"host": [
-						"backend-six-coral-59",
+						"web-orpin-zeta-44",
 						"vercel",
 						"app"
 					],
@@ -518,10 +518,10 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "https://backend-six-coral-59.vercel.app/api/venues/{{venueid}}/comments/{{commentid}}",
+					"raw": "https://web-orpin-zeta-44.vercel.app/api/venues/{{venueid}}/comments/{{commentid}}",
 					"protocol": "https",
 					"host": [
-						"backend-six-coral-59",
+						"web-orpin-zeta-44",
 						"vercel",
 						"app"
 					],
@@ -561,10 +561,10 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "https://backend-six-coral-59.vercel.app/api/venues/{{venueid}}",
+					"raw": "https://web-orpin-zeta-44.vercel.app/api/venues/{{venueid}}",
 					"protocol": "https",
 					"host": [
-						"backend-six-coral-59",
+						"web-orpin-zeta-44",
 						"vercel",
 						"app"
 					],
